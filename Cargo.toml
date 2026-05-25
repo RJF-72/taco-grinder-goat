@@ -1,0 +1,38 @@
+[package]
+name = "titan"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde_json = { workspace = true }
+lariat_capability = { path = "crates/lariat_capability" }
+lariat_driver = { path = "crates/lariat_driver" }
+lariat_inference = { path = "crates/lariat_inference" }
+lariat_mmie = { path = "crates/lariat_mmie" }
+lariat_physical_model = { path = "crates/lariat_physical_model" }
+
+[workspace]
+members = [
+  "crates/lariat_common",
+  "crates/lariat_capability",
+  "crates/lariat_physical_model",
+  "crates/lariat_mmie",
+  "crates/lariat_driver",
+  "crates/lariat_inference",
+]
+resolver = "2"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+thiserror = "1"
+anyhow = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+
+[profile.dev]
+opt-level = 0

@@ -1,0 +1,11 @@
+[package]
+name = "lariat_driver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+lariat_capability = { path = "../lariat_capability" }
+thiserror = { workspace = true }
+lariat_physical_model = { path = "../lariat_physical_model" }

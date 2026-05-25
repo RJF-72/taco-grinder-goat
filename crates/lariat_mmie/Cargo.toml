@@ -1,0 +1,14 @@
+[package]
+name = "lariat_mmie"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+lariat_physical_model = { path = "../lariat_physical_model" }
+lariat_capability = { path = "../lariat_capability" }
+
+[dev-dependencies]
+serde_json = { workspace = true }

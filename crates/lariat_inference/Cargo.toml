@@ -1,0 +1,14 @@
+[package]
+name = "lariat_inference"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+lariat_capability = { path = "../lariat_capability" }
+lariat_physical_model = { path = "../lariat_physical_model" }
+
+[features]
+default = []
